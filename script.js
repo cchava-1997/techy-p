@@ -15,12 +15,12 @@ function changeGif(button) {
     gif.src = "Images/Hover Gifs/gif01.gif"; // Reset to Default GIF
   }
   
-  // Function to handle the button click and redirect to the new page
+  // Function to handle the button click and navigate to the new page
   function redirect(answer) {
     if (answer === 'yes') {
-      window.location.href = "https://example.com/yes"; // Replace with your URL
+      window.location.href = "yes.html"; // Link to the "Yes" page in your app
     } else if (answer === 'no') {
-      window.location.href = "https://example.com/no"; // Replace with your URL
+      window.location.href = "no.html"; // Link to the "No" page in your app
     }
   }
   
