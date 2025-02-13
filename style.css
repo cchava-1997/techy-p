@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fce4ec;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .game-container {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff4081;
+    font-size: 2rem;
+  }
+  
+  #heart-container {
+    margin: 20px 0;
+  }
+  
+  #love-button {
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff4081;
+    transition: transform 0.2s;
+  }
+  
+  #love-button:hover {
+    transform: scale(1.2);
+  }
+  
+  #response {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ad1457;
+  }
+  
+  #heart-count {
+    font-size: 1.5rem;
+    color: #e91e63;
+  }
+  
