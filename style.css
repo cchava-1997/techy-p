@@ -6,7 +6,7 @@
   }
   
   body {
-    font-family: 'Poppins';
+    font-family: Arial, sans-serif;
     background-color: white;
     text-align: center;
     display: flex;
@@ -33,11 +33,11 @@
     margin: 20px 0;
   }
   
-  /* GIF Styling */
   #gif {
-    height: 200px;  /* Fixed height */
-    width: auto;    /* Keep aspect ratio */
-    max-width: 100%; /* Make sure it doesn't exceed the container */
+    height: 200px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
   }
   
   #button-container {
@@ -58,6 +58,7 @@
     transition: background-color 0.2s, transform 0.2s;
     margin: 10px;
     min-width: 100px;
+    position: relative;
   }
   
   button:hover {
@@ -68,7 +69,31 @@
     background-color: grey;
   }
   
-  /* Mobile and tablet view */
+  /* Loading GIF inside the button */
+  #loading {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    visibility: hidden; /* Hidden by default */
+  }
+  
+  /* Message Styling */
+  #no-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: black;
+    display: none; /* Hidden by default */
+  }
+  
+  #no-message p {
+    margin-top: 10px;
+    font-size: 1.5rem; /* Adjust this value as needed */
+  }
+  
+  /* Mobile View */
   @media (max-width: 768px) {
     h1 {
       font-size: 1.5rem;
@@ -78,5 +103,17 @@
       font-size: 1.2rem;
       padding: 8px 15px;
     }
+  
+    #gif {
+      height: 150px;
+      width: auto;
+    }
   }
   
+  /* Additional styling for the new GIF */
+#no-message img {
+    max-width: 150px;  /* Set max-width to make the GIF tiny */
+    height: auto;     /* Automatically adjust height to maintain aspect ratio */
+    object-fit: contain;  /* Ensures the GIF keeps its aspect ratio */
+    margin-top: 20px; /* Adds space between the new GIF and the message */
+  }

@@ -8,7 +8,7 @@
 </head>
 <body>
   <div class="game-container">
-    <h1>Question</h1>  <!-- Changed the text to a question -->
+    <h1>Will you be my forevvaa valentine</h1>  <!-- Changed the text to a question -->
 
     <!-- GIF Display -->
     <div id="gif-container">
@@ -29,11 +29,14 @@
         id="no-button"
         onMouseOver="changeGif('no')"
         onMouseOut="resetGif()"
-        onClick="redirect('no')"
+        onClick="handleNoClick()"
       >
         No
       </button>
     </div>
+
+    <!-- Message to be shown after 2 seconds -->
+    <div id="no-message"></div>
   </div>
 
   <script src="script.js"></script>
