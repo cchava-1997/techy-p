@@ -8,21 +8,34 @@
 </head>
 <body>
   <div class="game-container">
-    <h1>You're the best! 😎</h1>  <!-- Updated text -->
-    
-    <!-- GIF display -->
+    <h1>Question</h1>  <!-- Replaced with "Question" -->
+
+    <!-- GIF Display -->
     <div id="gif-container">
-      <img id="gif" src="gif01.gif" alt="Love GIF" />
+      <img id="gif" src="gif01.gif" alt="Default GIF" />
     </div>
-    
+
     <!-- Buttons -->
     <div id="button-container">
-      <button id="yes-button" onmouseover="changeGif('yes')" onmouseout="resetGif()" onclick="redirect('yes')">Yes</button>
-      <button id="no-button" onmouseover="changeGif('no')" onmouseout="resetGif()" onclick="redirect('no')">No</button>
+      <button
+        id="yes-button"
+        onMouseOver="changeGif('yes')"
+        onMouseOut="resetGif()"
+        onClick="redirect('yes')"
+      >
+        Yes
+      </button>
+      <button
+        id="no-button"
+        onMouseOver="changeGif('no')"
+        onMouseOut="resetGif()"
+        onClick="redirect('no')"
+      >
+        No
+      </button>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
