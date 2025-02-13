@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
   }
   
   .game-container {
@@ -19,6 +20,7 @@
     background-color: transparent;
     max-width: 400px;
     text-align: center;
+    width: 100%;
   }
   
   h1 {
@@ -39,6 +41,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
   }
   
   button {
@@ -50,6 +53,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
+    margin: 10px;
+    min-width: 100px;
   }
   
   button:hover {
@@ -58,5 +63,17 @@
   
   button:active {
     background-color: grey;
+  }
+  
+  /* Mobile and tablet view */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      font-size: 1.2rem;
+      padding: 8px 15px;
+    }
   }
   

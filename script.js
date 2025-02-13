@@ -1,4 +1,4 @@
-// Function to change the GIF based on the button hovered
+// Function to change the GIF based on the button hovered or tapped
 function changeGif(button) {
     const gif = document.getElementById("gif");
     
@@ -9,7 +9,7 @@ function changeGif(button) {
     }
   }
   
-  // Function to reset the GIF back to default when not hovering
+  // Function to reset the GIF back to default when not hovering or tapping
   function resetGif() {
     const gif = document.getElementById("gif");
     gif.src = "Images/Hover Gifs/gif01.gif"; // Reset to Default GIF
@@ -23,4 +23,16 @@ function changeGif(button) {
       window.location.href = "https://example.com/no"; // Replace with your URL
     }
   }
+  
+  // Adding touch event listeners for mobile devices to simulate hover on tap
+  const yesButton = document.getElementById('yes-button');
+  const noButton = document.getElementById('no-button');
+  
+  // Simulate hover effect on touchstart
+  yesButton.addEventListener('touchstart', () => changeGif('yes'));
+  noButton.addEventListener('touchstart', () => changeGif('no'));
+  
+  // Reset GIF on touchend
+  yesButton.addEventListener('touchend', resetGif);
+  noButton.addEventListener('touchend', resetGif);
   
