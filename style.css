@@ -1,3 +1,4 @@
+/* Basic Styles */
 * {
     margin: 0;
     padding: 0;
@@ -30,12 +31,13 @@
   
   #gif-container {
     margin: 20px 0;
-    height: fit-content;
   }
   
+  /* GIF Styling */
   #gif {
-    max-width: 100%;
-    height: auto;
+    height: 200px;  /* Fixed height */
+    width: auto;    /* Keep aspect ratio */
+    max-width: 100%; /* Make sure it doesn't exceed the container */
   }
   
   #button-container {
