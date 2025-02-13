@@ -30,6 +30,7 @@
   
   #gif-container {
     margin: 20px 0;
+    height: fit-content;
   }
   
   #gif {
