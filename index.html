@@ -3,19 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>💖</title>
+  <title>Cause I am the best evvvvv</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="game-container">
-    <h1>will you be my first valentine? 💕</h1>
-    <p id="question">Click the heart to answer ❤️</p>
-    <div id="heart-container">
-      <button id="love-button" onclick="respondToLove()">💖</button>
+    <h1>You're the best! 😎</h1>  <!-- Updated text -->
+    
+    <!-- GIF display -->
+    <div id="gif-container">
+      <img id="gif" src="gif01.gif" alt="Love GIF" />
     </div>
-    <div id="response"></div>
-    <p id="heart-count"></p>
+    
+    <!-- Buttons -->
+    <div id="button-container">
+      <button id="yes-button" onmouseover="changeGif('yes')" onmouseout="resetGif()" onclick="redirect('yes')">Yes</button>
+      <button id="no-button" onmouseover="changeGif('no')" onmouseout="resetGif()" onclick="redirect('no')">No</button>
+    </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
+

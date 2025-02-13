@@ -6,7 +6,7 @@
   
   body {
     font-family: Arial, sans-serif;
-    background-color: #fce4ec;
+    background-color: white;  /* Changed to white */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -16,7 +16,7 @@
   
   .game-container {
     padding: 20px;
-    background-color: white;
+    background-color: transparent; /* No background color */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 400px;
@@ -24,35 +24,14 @@
   }
   
   h1 {
-    color: #ff4081;
+    color: black; /* Adjust text color */
     font-size: 2rem;
   }
   
-  #heart-container {
+  #gif-container {
     margin: 20px 0;
   }
   
-  #love-button {
-    font-size: 3rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #ff4081;
-    transition: transform 0.2s;
+  #gif {
+    max-width: 100%;
   }
-  
-  #love-button:hover {
-    transform: scale(1.2);
-  }
-  
-  #response {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    color: #ad1457;
-  }
-  
-  #heart-count {
-    font-size: 1.5rem;
-    color: #e91e63;
-  }
-  
