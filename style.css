@@ -8,7 +8,7 @@
   body {
     font-family: 'Cute Font', sans-serif;
     font-weight: 600;
-    background-color: white;
+    background-color: pink;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -65,10 +65,10 @@
     font-family: 'Cute Font', sans-serif;
     font-size: 1.5rem;
     padding: 10px 20px;
-    background-color: black;
+    background-color: #f76c8c;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
     margin: 10px;
@@ -77,11 +77,13 @@
   }
   
   button:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);  /* Slight grow effect on hover */
+  background-color: #ff4500;  /* Darker pink on hover */
   }
   
   button:active {
-    background-color: grey;
+    transform: scale(1.1);  /* Slight grow effect on hover */
+  background-color: #ff4500;  /* Darker pink on hover */
   }
   
   /* Loading GIF inside the button */
