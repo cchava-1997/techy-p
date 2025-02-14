@@ -3,17 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yes Page</title>
+  <title>Yes</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="yes">
   <div class="game-container">
-    <h1>You said Yes! 💖</h1>
+    <!-- Line 1: Oh yayyyy!!! -->
+    <h1>Oh yayyyy!!!</h1>
 
-    <p>Thank you for your response!</p>
+    <!-- Line 2: Typing Text Animation -->
+    <div id="typing-container">
+        <span id="typing-text"></span><span id="cursor">_</span> <!-- Blinking cursor -->
+      </div>
+    <!-- Line 3: GIF -->
+    <div id="gif-container">
+      <img id="gif-yes" src="Images/Hover Gifs/yesgif.gif" alt="Yes GIF" />
+    </div>
 
     <!-- Back to Home Button -->
-    <button onclick="window.location.href='index.html'">Back to Home</button>
+    <button id="back-home-button" onclick="window.location.href='index.html'">Back to Home</button>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

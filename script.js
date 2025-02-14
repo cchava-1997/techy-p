@@ -59,3 +59,111 @@ function changeGif(button) {
     }
   }
   
+
+// Line 1: "Oh yayyyy!!!"
+const typingText = document.getElementById('typing-text');
+const cursor = document.getElementById('cursor');
+const happyText = "Happy";  // The text that stays always visible
+const organDonorText = " Organ Donor";  // The second text to type and backspace
+const finalText = " Valentine's Day Love 💖";  // Final text to type
+
+let i = 0;
+let isBackspacing = false;
+let typingSpeed = 100;  // Speed of typing
+let backspacingSpeed = 50;  // Speed of backspacing
+let typingDone = false;  // To check if typing is finished
+let isWaitingForMessage = false;  // To manage the waiting period
+
+// Step 1: Type "Happy"
+function typeHappy() {
+  if (i < happyText.length) {
+    typingText.innerHTML = happyText.substring(0, i);
+    i++;
+    setTimeout(typeHappy, typingSpeed);
+  } else {
+    // Once "Happy" is typed, proceed to type "Organ Donor"
+    setTimeout(typeOrganDonor, 500);
+  }
+}
+
+// Step 2: Type "Organ Donor"
+function typeOrganDonor() {
+  typingText.innerHTML = happyText + organDonorText.substring(0, i - happyText.length);
+  i++;
+  if (i > happyText.length + organDonorText.length) {
+    // Once "Organ Donor" is typed, show "Oops!!" and then "Let me try again..."
+    setTimeout(showOopsMessage, 500);
+  } else {
+    setTimeout(typeOrganDonor, typingSpeed);
+  }
+}
+
+// Step 3: Show "Oops!!" and then "Let me try again..."
+function showOopsMessage() {
+  // Change "Oh yayyyy!!!" to "Oops!!"
+  document.querySelector('h1').innerHTML = "Oops!!";
+  cursor.style.display = 'inline-block';  // Ensure the cursor is still blinking
+  setTimeout(() => {
+    // Change "Oops!!" to "Let me try again..."
+    document.querySelector('h1').innerHTML = "Let me try again...";
+    setTimeout(() => {
+      // Once "Let me try again..." is shown, start the backspacing and continue typing
+      startBackspacing();
+    }, 1000);  // 1-second delay before starting backspacing
+  }, 1000);  // 1-second delay before changing to "Let me try again..."
+}
+
+// Step 4: Backspace "Organ Donor"
+function startBackspacing() {
+  i = happyText.length + organDonorText.length;  // Reset i to start backspacing from the end of Organ Donor
+  isBackspacing = true;
+
+  // Begin backspacing "Organ Donor"
+  backspaceOrganDonor();
+}
+
+// Step 5: Backspace "Organ Donor"
+function backspaceOrganDonor() {
+  if (isBackspacing) {
+    typingText.innerHTML = happyText + organDonorText.substring(0, i - happyText.length);
+    i--;
+    if (i === happyText.length) {
+      // After backspacing is complete, start typing "Valentine's Day Love"
+      setTimeout(typeFinalText, 500);
+      isBackspacing = false;
+      cursor.style.display = 'none';  // Hide the cursor after typing finishes
+      setTimeout(showGif, 2000);  // Show the GIF after 500ms
+    } else {
+      setTimeout(backspaceOrganDonor, backspacingSpeed);
+    }
+  }
+}
+
+// Step 6: Type "Valentine's Day Love 💖"
+function typeFinalText() {
+  let j = 0;
+  function type() {
+    typingText.innerHTML = happyText + finalText.substring(0, j);
+    j++;
+    if (j > finalText.length) {
+      // Once the final text is typed, show the GIF
+      setTimeout(showGif, 1200); // Ensure GIF shows after typing finishes
+      return;
+    }
+    setTimeout(type, typingSpeed);
+  }
+  type();
+}
+
+// Step 7: Show the GIF after typing is complete
+function showGif() {
+  const gifContainer = document.getElementById('gif-container');
+  const gif = document.getElementById('gif-yes');
+  gifContainer.style.display = 'block';  // Make the GIF container visible
+  gif.style.display = 'inline-block';  // Show the GIF
+}
+
+// Start the typing effect when the page loads
+window.onload = () => {
+  typeHappy();  // Start with typing "Happy"
+};
