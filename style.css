@@ -6,7 +6,8 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Cute Font', sans-serif;
+    font-weight: 600;
     background-color: white;
     text-align: center;
     display: flex;
@@ -16,6 +17,18 @@
     margin: 0;
   }
   
+ .yes {
+    font-family: 'Cute Font', sans-serif;
+    font-weight: 600;
+    background-color: #FCFBFB;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+ }
+  FCFBFB
   .game-container {
     padding: 20px;
     background-color: transparent;
@@ -25,8 +38,9 @@
   }
   
   h1 {
+    font-family: 'Cute Font', sans-serif;
     color: black;
-    font-size: 2rem;
+    font-size: 4rem;
   }
   
   #gif-container {
@@ -48,6 +62,7 @@
   }
   
   button {
+    font-family: 'Cute Font', sans-serif;
     font-size: 1.5rem;
     padding: 10px 20px;
     background-color: black;
@@ -116,4 +131,55 @@
     height: auto;     /* Automatically adjust height to maintain aspect ratio */
     object-fit: contain;  /* Ensures the GIF keeps its aspect ratio */
     margin-top: 20px; /* Adds space between the new GIF and the message */
+  }
+
+
+
+
+  /* Styling for the typing animation container */
+/* Typing Animation Container */
+#typing-container {
+    font-size: 2rem;
+    color: #ff6347;  /* Lobster red color */
+    font-family: 'Cute Font';
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;  /* Prevent wrapping of the typing text */
+  }
+  
+  /* Blinking cursor */
+  
+  /* GIF styling */
+  #gif {
+    height: 200px; /* Fixed height for the GIF */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;  /* Keeps the GIF ratio */
+    border-radius: 15px;
+
+  }
+  
+
+  #gif-yes {
+    height: 200px; /* Fixed height for the GIF */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;  /* Keeps the GIF ratio */
+    border-radius: 15px;
+    display: none;
+  }
+  /* For mobile responsiveness */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem; /* Adjust the size for smaller screens */
+    }
+  
+    #typing-container {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+  
+    #gif {
+      height: 150px;  /* Smaller GIF size on mobile */
+    }
   }
