@@ -8,7 +8,7 @@
   body {
     font-family: 'Cute Font', sans-serif;
     font-weight: 600;
-    background-color: pink;
+    background-color: white;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -86,6 +86,34 @@
     transform: scale(1.1);  /* Slight grow effect on hover */
   background-color: #ff4500;  /* Darker pink on hover */
   }
+
+
+  #main-button {
+    font-family: 'Cute Font', sans-serif;
+    font-size: 1.5rem;
+    padding: 40px 20px;
+    background-color: #f76c8c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    margin: 10px;
+    min-width: 100px;
+    position: relative;
+  }
+  
+  #main-button:hover {
+    transform: scale(1.1);  /* Slight grow effect on hover */
+  background-color: #ff4500;  /* Darker pink on hover */
+  }
+  
+  #main-button:active {
+    transform: scale(1.1);  /* Slight grow effect on hover */
+  background-color: #ff4500;  /* Darker pink on hover */
+  }
+
+
   
   /* Loading GIF inside the button */
   #loading {
@@ -111,6 +139,44 @@
     font-size: 1.5rem; /* Adjust this value as needed */
   }
   
+   
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f76c8c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  footer button {
+    background-color: white;
+    color: #f76c8c;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  footer button:hover {
+    background-color: #ffe6e6;
+  }
+
+
+
+
   /* Mobile View */
   @media (max-width: 768px) {
     h1 {
