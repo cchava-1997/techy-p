@@ -189,3 +189,17 @@ function showGif() {
 window.onload = () => {
   typeHappy();  // Start with typing "Happy"
 };
+
+// 18maygift
+function replaceGifWithStill() {
+  const gif = document.getElementById('main-gif');
+  const still = document.getElementById('static-image');
+  if (gif && still) {
+    setTimeout(() => {
+      gif.style.display = 'none';
+      still.style.display = 'block';
+    }, 1400); // show static image after 5 seconds
+  }
+}
+
+window.addEventListener('DOMContentLoaded', replaceGifWithStill);
