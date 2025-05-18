@@ -191,15 +191,15 @@ window.onload = () => {
 };
 
 // 18maygift
-function replaceGifWithStill() {
-  const gif = document.getElementById('main-gif');
-  const still = document.getElementById('static-image');
-  if (gif && still) {
-    setTimeout(() => {
-      gif.style.display = 'none';
-      still.style.display = 'block';
-    }, 1400); // show static image after 5 seconds
-  }
-}
+// function replaceGifWithStill() {
+//   const gif = document.getElementById('main-gif');
+//   const still = document.getElementById('static-image');
+//   if (gif && still) {
+//     setTimeout(() => {
+//       gif.style.display = 'none';
+//       still.style.display = 'block';
+//     }, 1400); 
+//   }
+// }
 
-window.addEventListener('DOMContentLoaded', replaceGifWithStill);
+// window.addEventListener('DOMContentLoaded', replaceGifWithStill);
