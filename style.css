@@ -8,7 +8,7 @@
   body {
     font-family: 'Cute Font', sans-serif;
     font-weight: 600;
-    background-color: white;
+    background-color: pink;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -250,5 +250,54 @@
   
     #gif {
       height: 150px;  /* Smaller GIF size on mobile */
+    }
+  }
+
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
+    gap: 12px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .calendar-grid button {
+    aspect-ratio: 1 / 1; /* Ensures square buttons */
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .calendar-grid button.active {
+    background-color: #f76c8c;
+    color: white;
+  }
+  
+  .calendar-grid button.active:hover {
+    background-color: #ff4d6d;
+    transform: scale(1.05);
+  }
+  
+  .calendar-grid button.disabled {
+    background-color: #f8f8f8;
+    cursor: not-allowed;
+  }
+  
+  /* ========== RESPONSIVE MOBILE (≤768px) ========== */
+  @media (max-width: 768px) {
+    .calendar-grid {
+      grid-template-columns: repeat(3, 1fr); /* Mobile: 3 columns */
+      padding: 16px;
+      gap: 10px;
+    }
+  
+    .calendar-grid button {
+      font-size: 1rem;
     }
   }
