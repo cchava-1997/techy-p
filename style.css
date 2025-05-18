@@ -285,7 +285,8 @@
   }
   
   .calendar-grid button.disabled {
-    background-color: #f8f8f8;
+    background-color: pink;
+    border: 2px dashed #f8f8f866; /* ✅ 2px dashed border with color */
     cursor: not-allowed;
   }
   
