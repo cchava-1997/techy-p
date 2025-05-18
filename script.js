@@ -203,3 +203,12 @@ window.onload = () => {
 // }
 
 // window.addEventListener('DOMContentLoaded', replaceGifWithStill);
+
+
+window.onload = () => {
+  setTimeout(() => {
+    const player = document.querySelector('lottie-player');
+    player.style.display = 'none';
+    document.getElementById('static-image').style.display = 'block';
+  }, 1800); // after 5 seconds
+};

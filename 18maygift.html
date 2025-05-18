@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> 18May </title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>18May</title>
+
+  <!-- Styles and Fonts -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cute+Font&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ✅ Add Lottie script here -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
   <div class="game-container">
     <div class="gif-wrapper">
-      <!-- <img id="main-gif" src="/Images/mapfile.gif" alt="Main Moment" /> -->
-      <img id="static-image" src="/Images/mapfile.jpg" alt="Still image"  />
-    </div>  
+      <lottie-player
+        src="Images/18may.json"
+        background="transparent"
+        speed="1"
+        style="width: 100%; max-width: 600px; height: auto"
+        autoplay
+      ></lottie-player>
+
+      <img
+        id="static-image"
+        src="Images/mapfile.jpg"
+        alt="Map"
+        style="display: none; width: 100%; max-width: 600px"
+      />
+    </div>
   </div>
 
-  
-
   <script src="script.js"></script>
+
   <footer>
     <div class="footer-content">
       <p>&copy; 2024 WYBV. All rights reserved.</p>
       <button onclick="window.location.href='index.html'">Home</button>
     </div>
   </footer>
-  
 </body>
 </html>
